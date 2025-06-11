@@ -97,8 +97,7 @@ export default function App() {
                 separator=","
                 direction="up"
                 duration={11.9}
-                className="count-up-text"
-              />
+                className="count-up-text" onStart={100} onEnd={projectData.length}              />
             </div>
             <p className="text-16sm leading-relaxed">
               Project
