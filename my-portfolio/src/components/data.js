@@ -62,6 +62,44 @@ export const projectData = [
       linkTo: '/desain'
     }
   ];
+
+  // data.js
+
+export const desainitems = [
+  {
+    image: "/datadesain/Web portofolio.png",
+    title: "Portofolio Desain",
+    subtitle: "Figma",
+    handle: "Allam",
+    borderColor: "#2BAAB3",
+    gradient: "linear-gradient(145deg, #2BAAB3, #000)",
+  },
+  {
+    image: "/datadesain/Tiketindo.png",
+    title: "Competition design",
+    subtitle: "Figma",
+    handle: "Me & Team",
+    borderColor: "#647A9A",
+    gradient: "linear-gradient(145deg, #647A9A, #000)",
+  },
+  {
+    image: "/datadesain/CourseMiut.png",
+    title: "Competition design",
+    subtitle: "Figma",
+    handle: "Me & Team",
+    borderColor: "#6F7481",
+    gradient: "linear-gradient(145deg, #6F7481, #000)",
+  },
+  {
+    image: "/datadesain/math.png",
+    title: "Application design",
+    subtitle: "Figma",
+    handle: "Allam",
+    borderColor: "#99A98F",
+    gradient: "linear-gradient(145deg, #99A98F, #000)",
+  },
+];
+
   
   const galleryItems = [
     {
