@@ -1,7 +1,6 @@
 'use client';
 
 import { useMediaQuery } from 'react-responsive';
-import Squares from '@/components/Squares';
 import CircularGallery from '@/components/CircularGallery'
 import galleryItems from '@/components/data';
 import NavbarGalery from '@/components/Navbar2';

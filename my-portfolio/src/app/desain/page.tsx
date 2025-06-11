@@ -1,5 +1,3 @@
-import Squares from '@/components/Squares';
-import galleryItems from '@/components/data';
 import NavbarGalery from '@/components/Navbar2';
 import Footer from '@/components/Footer';
 

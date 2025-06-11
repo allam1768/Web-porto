@@ -1,24 +1,18 @@
 import React from 'react';
 import SkillsCard from '@/components/SkilsCard';
 import ProjectCard from '@/components/ProjectCard';
-import Squares from '@/components/Squares';
 import TiltedCard from '@/components/TiltedCard';
 import ClickSpark from '@/components/ClickSpark';
-import Image from 'next/image';
-import { Github, Mail, Instagram, Globe } from 'lucide-react';
+import Image from 'next/image'; 
 import CountUp from '@/components/CountUp'
-import { Link } from 'react-router-dom'; // Ini penting!
 
 
 // Import the data from the new file
-import { educationData, projectData, skillsData } from '../components/data'; // Adjust the path if data.js is in a different directory
+import { educationData, projectData, skillsData } from '../components/data'; 
 import Footer from '@/components/Footer';
 
 
 export default function App() {
-  // educationData is now imported from data.js, no need to define it here
-  // const educationData = [...]; // This line is removed
-
   return (
     <div className="w-full">
       {/* Home Section */}
@@ -32,7 +26,7 @@ export default function App() {
 
           {/* Name */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 text-center leading-tight">
-            I'm <span style={{ color: '#2BB6C0' }}>Allam,</span>
+            I&apos;m <span style={{ color: '#2BB6C0' }}>Allam,</span>
           </h1>
 
           {/* Front End Development Text */}
@@ -49,33 +43,35 @@ export default function App() {
         {/* Profile Image with Button */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
           <div className="relative w-[370px] h-[370px] rounded-t-full overflow-hidden">
-            <img
+            <Image
               src="/profilepp.svg"
               alt="Allam Profile"
+              layout="fill" // Use fill for responsive images where parent has dimensions
+              objectFit="cover"
               className="w-full h-full object-cover"
             />
 
             {/* Portfolio Button */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30">
-  <a
-    href="/cvallam.pdf" // ganti path ini sesuai lokasi file CV kamu
-    download
-    className="flex items-center gap-2 text-white font-medium py-2.5 px-6 rounded-full border-[3px] border-gray-200 shadow-md transition-all duration-300"
-    style={{ backgroundColor: '#2BB6C0', '--hover-bg': '#2299A2' }}
-  >
-    Download CV
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-4 h-4"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M17 7L7 17M17 7H7m10 0v10" />
-    </svg>
-  </a>
-</div>
+              <a
+                href="/cvallam.pdf" // ganti path ini sesuai lokasi file CV kamu
+                download
+                className="flex items-center gap-2 text-white font-medium py-2.5 px-6 rounded-full border-[3px] border-gray-200 shadow-md transition-all duration-300"
+                style={{ backgroundColor: '#2BB6C0', }}
+              >
+                Download CV
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 7L7 17M17 7H7m10 0v10" />
+                </svg>
+              </a>
+            </div>
 
           </div>
         </div>
@@ -85,7 +81,7 @@ export default function App() {
           <div className="">
             <div className="text-5xl text-gray-400 leading-none">❛❛</div>
             <p className="text-16sm leading-relaxed">
-              The mobile front-end I designed and built made the app smooth and easy to use. If you want great results, I'm your dev!
+              The mobile front-end I designed and built made the app smooth and easy to use. If you want great results, I&apos;m your dev!
             </p>
           </div>
         </div>
@@ -94,14 +90,14 @@ export default function App() {
         <div className="absolute bottom-[200px] right-[calc(50%-600px)] z-50 max-w-[320px] hidden lg:block">
           <div className="">
             <div className="text-4xl leading-none">
-            <CountUp
-              from={100}
-              to={projectData.length} // Dynamically use the number of projects
-              separator=","
-              direction="up"
-              duration={11.9}
-              className="count-up-text"
-            />
+              <CountUp
+                from={100}
+                to={projectData.length} // Dynamically use the number of projects
+                separator=","
+                direction="up"
+                duration={11.9}
+                className="count-up-text"
+              />
             </div>
             <p className="text-16sm leading-relaxed">
               Project
@@ -112,99 +108,99 @@ export default function App() {
 
       {/* project Section */}
       <section id="project" className="scroll-mt-18 bg-white flex items-center justify-center">
-  <div className="w-full">
-    <ClickSpark
-      sparkColor='#2BB6C0'
-      sparkSize={10}
-      sparkRadius={15}
-      sparkCount={8}
-      duration={400}
-    >
-      <div
-        className="
-          rounded-none sm:rounded-3xl
-          rounded-b-3xl
-          pt-5 sm:pt-10
-          px-4 sm:px-8 lg:px-16
-        "
-        style={{ backgroundColor: '#252526' }}
-      >
-        {/* Judul + Tombol */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between mb-6 sm:mb-9 gap-4 sm:gap-0">
-          {/* Judul */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
-            <span className="block text-white">Let's Have a Look at</span>
-            <span className="block">
-              <span className="text-white">my </span>
-              <span style={{ color: '#2BB6C0' }}>Project</span>
-            </span>
-          </h2>
-
-          {/* Tombol */}
-          <button
-            className="
-              flex items-center gap-2
-              text-white font-semibold
-              py-2 px-4 sm:px-5
-              rounded-full
-              transition duration-300
-              text-sm sm:text-base
-              self-end sm:self-auto
-              whitespace-nowrap
-              mt-2 sm:mt-0
-            "
-            style={{ backgroundColor: '#2BB6C0', '--hover-bg': '#2299A2' }}
+        <div className="w-full">
+          <ClickSpark
+            sparkColor='#2BB6C0'
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
           >
-            See More
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="transform rotate-[30deg] sm:w-5 sm:h-5"
+            <div
+              className="
+                rounded-none sm:rounded-3xl
+                rounded-b-3xl
+                pt-5 sm:pt-10
+                px-4 sm:px-8 lg:px-16
+              "
+              style={{ backgroundColor: '#252526' }}
             >
-              <path
-                d="M12 4L12 20M12 4L6 10M12 4L18 10"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
+              {/* Judul + Tombol */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between mb-6 sm:mb-9 gap-4 sm:gap-0">
+                {/* Judul */}
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
+                  <span className="block text-white">Let&apos;s Have a Look at</span>
+                  <span className="block">
+                    <span className="text-white">my </span>
+                    <span style={{ color: '#2BB6C0' }}>Project</span>
+                  </span>
+                </h2>
 
-        {/* Project Grid */}
-        <div className="
-          flex justify-center items-center
-          gap-4 sm:gap-6 lg:gap-10
-          pb-6 sm:pb-10
-          flex-wrap
-          mt-6 sm:mt-10 lg:mt-30
-        ">
-          {projectData
-            .sort((a, b) => {
-              // Convert dates to a comparable format (e.g., YYYYMMDD) for sorting
-              const dateA = a.date.split(',').reverse().join(''); // "10,06,24" -> "240610"
-              const dateB = b.date.split(',').reverse().join('');
-              return dateB.localeCompare(dateA); // Descending order (newest first)
-            })
-            .slice(0, 3) // Take only the first 3 elements
-            .map((project, index) => (
-              <ProjectCard
-                key={index}
-                projectName={project.projectName}
-                image={project.image}
-                date={project.date}
-                description={project.description}
-                link={project.link}
-              />
-            ))}
+                {/* Tombol */}
+                <button
+                  className="
+                    flex items-center gap-2
+                    text-white font-semibold
+                    py-2 px-4 sm:px-5
+                    rounded-full
+                    transition duration-300
+                    text-sm sm:text-base
+                    self-end sm:self-auto
+                    whitespace-nowrap
+                    mt-2 sm:mt-0
+                    bg-[#2BB6C0]
+                  "
+                >
+                  See More
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="transform rotate-[30deg] sm:w-5 sm:h-5"
+                  >
+                    <path
+                      d="M12 4L12 20M12 4L6 10M12 4L18 10"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Project Grid */}
+              <div className="
+                flex justify-center items-center
+                gap-4 sm:gap-6 lg:gap-10
+                pb-6 sm:pb-10
+                flex-wrap
+                mt-6 sm:mt-10 lg:mt-30
+              ">
+                {projectData
+                  .sort((a, b) => {
+                    // Convert dates to a comparable format (e.g., YYYYMMDD) for sorting
+                    const dateA = a.date.split(',').reverse().join(''); // "10,06,24" -> "240610"
+                    const dateB = b.date.split(',').reverse().join('');
+                    return dateB.localeCompare(dateA); // Descending order (newest first)
+                  })
+                  .slice(0, 3) // Take only the first 3 elements
+                  .map((project, index) => (
+                    <ProjectCard
+                      key={index}
+                      projectName={project.projectName}
+                      image={project.image}
+                      date={project.date}
+                      description={project.description}
+                      link={project.link}
+                    />
+                  ))}
+              </div>
+            </div>
+          </ClickSpark>
         </div>
-      </div>
-    </ClickSpark>
-  </div>
       </section>
 
       {/* Skills Section */}
@@ -232,7 +228,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Runing Section */}
+      {/* Running Section */}
       <section className="relative flex items-center justify-center h-32 sm:h-36 lg:h-40 bg-white overflow-hidden">
         {/* Kotak miring */}
         <div
@@ -242,19 +238,19 @@ export default function App() {
           <div className="flex whitespace-nowrap animate-scroll-left">
             {/* Duplikat isi untuk animasi tanpa jeda */}
             <span className="text-sm sm:text-base lg:text-lg font-medium text-black mr-4 sm:mr-6 lg:mr-8">
-              Photography ✦︎ Mobile Development ✦︎ Front End ✦︎ Editing ✦︎
+              Photography ✦ Mobile Development ✦ Front End ✦ Editing ✦
             </span>
             <span className="text-sm sm:text-base lg:text-lg font-medium text-black mr-4 sm:mr-6 lg:mr-8">
-              Photography ✦︎ Mobile Development ✦︎ Front End ✦︎ Editing ✦︎
+              Photography ✦ Mobile Development ✦ Front End ✦ Editing ✦
             </span>
             <span className="text-sm sm:text-base lg:text-lg font-medium text-black mr-4 sm:mr-6 lg:mr-8">
-              Photography ✦︎ Mobile Development ✦︎ Front End ✦︎ Editing ✦︎
+              Photography ✦ Mobile Development ✦ Front End ✦ Editing ✦
             </span>
             <span className="text-sm sm:text-base lg:text-lg font-medium text-black mr-4 sm:mr-6 lg:mr-8">
-              Photography ✦︎ Mobile Development ✦︎ Front End ✦︎ Editing ✦︎
+              Photography ✦ Mobile Development ✦ Front End ✦ Editing ✦
             </span>
             <span className="text-sm sm:text-base lg:text-lg font-medium text-black mr-4 sm:mr-6 lg:mr-8">
-              Photography ✦︎ Mobile Development ✦︎ Front End ✦︎ Editing ✦︎
+              Photography ✦ Mobile Development ✦ Front End ✦ Editing ✦
             </span>
           </div>
         </div>
@@ -308,7 +304,7 @@ export default function App() {
               {/* Deskripsi - Selalu di tengah untuk mobile */}
               <div className="text-center lg:text-left max-w-xl lg:max-w-2xl">
                 <h3 className="text-xl sm:text-2xl font-semibold text-black mb-3 sm:mb-4">
-                  Hi, I'm <span style={{ color: '#2BB6C0' }}>Allam Permata Putra</span>
+                  Hi, I&apos;m <span style={{ color: '#2BB6C0' }}>Allam Permata Putra</span>
                 </h3>
                 <p className="text-sm sm:text-base text-black leading-relaxed mb-4 sm:mb-6">
                   Saya adalah seorang <span style={{ color: '#2BB6C0' }}>Frontend Developer</span> yang antusias membangun antarmuka elegan dan responsif menggunakan <span style={{ color: '#2BB6C0' }}>React</span>, <span style={{ color: '#2BB6C0' }}>Tailwind CSS</span>, dan <span style={{ color: '#2BB6C0' }}>Flutter</span>. Saya juga tertarik dalam dunia <span style={{ color: '#2BB6C0' }}>UI/UX</span>, <span style={{ color: '#2BB6C0' }}>desain web</span>, serta <span style={{ color: '#2BB6C0' }}>pengembangan aplikasi mobile</span>.
@@ -321,8 +317,7 @@ export default function App() {
                   <a
                     href="/cvallam.pdf"
                     download
-                    className="inline-flex items-center gap-2 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition duration-300 text-sm sm:text-base"
-                    style={{ backgroundColor: '#2BB6C0', '--hover-bg': '#2299A2' }}
+                    className="bg-[#2BB6C0] inline-flex items-center gap-2 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition duration-300 text-sm sm:text-base"
                   >
                     Download CV
                     <svg
@@ -426,10 +421,10 @@ export default function App() {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-32">
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 md:mb-8 text-black leading-tight">
-                Let's Work <span style={{ color: '#2BB6C0' }}>Together</span>
+                Let&apos;s Work <span style={{ color: '#2BB6C0' }}>Together</span>
               </h2>
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-full lg:max-w-lg">
-                Got an idea to bring to life, interested in a creative partnership, or simply want to connect? I'm all ears — reach out!
+                Got an idea to bring to life, interested in a creative partnership, or simply want to connect? I&apos;m all ears — reach out!
               </p>
             </div>
 
@@ -449,7 +444,7 @@ export default function App() {
                   href="https://mail.google.com/mail/?view=cm&to=permataallam7@gmail.com" target="_blank" rel="noopener noreferrer"
                   className="inline-block w-full lg:w-auto px-6 md:px-8 py-3 md:py-4 border-2 border-black text-black rounded-lg hover:bg-black hover:text-white transition-all duration-300 font-medium text-center"
                 >
-                  Let's Collaborate
+                  Let&apos;s Collaborate
                 </a>
               </div>
             </div>
