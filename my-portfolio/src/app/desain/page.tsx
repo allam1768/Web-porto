@@ -25,6 +25,7 @@ export default function GalleryPage() {
             verticalDistance={70}
             delay={5000}
             pauseOnHover={false}
+            onCardClick={() => {}} 
           >
             <Card>
               <div className="p-4">
