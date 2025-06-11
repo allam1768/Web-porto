@@ -4,87 +4,10 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 
-// DecryptedText Component
-const DecryptedText = ({
-  text,
-  speed = 100,
-  maxIterations = 20,
-  characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?@#$%^&*",
-  className = "",
-  parentClassName = "",
-  encryptedClassName = ""
-}) => {
-  const [displayText, setDisplayText] = useState('')
-  const [isDecrypting, setIsDecrypting] = useState(false)
-
-  useEffect(() => {
-    if (isDecrypting) {
-      let iteration = 0
-      const interval = setInterval(() => {
-        setDisplayText(prevText => {
-          return text
-            .split('')
-            .map((letter, index) => {
-              if (index < iteration) {
-                return text[index]
-              }
-              return characters[Math.floor(Math.random() * characters.length)]
-            })
-            .join('')
-        })
-
-        if (iteration >= text.length) {
-          clearInterval(interval)
-          setDisplayText(text)
-        }
-
-        iteration += 1 / 3
-      }, speed)
-
-      return () => clearInterval(interval)
-    }
-  }, [isDecrypting, text, speed, characters])
-
-  useEffect(() => {
-    setIsDecrypting(true)
-  }, [])
-
-  return (
-    <span className={`${parentClassName} ${className}`}>
-      {displayText || text}
-    </span>
-  )
-}
-
-// Translation content
-const translations = {
-  en: {
-    home: 'Home',
-    project: 'Project',
-    skills: 'Skills',
-    about: 'About',
-    education: 'Education',
-    contact: 'Contact',
-    language: 'Language',
-  },
-  id: {
-    home: 'Beranda',
-    project: 'Proyek',
-    skills: 'Keahlian',
-    about: 'Tentang',
-    education: 'Pendidikan',
-    contact: 'Kontak',
-    language: 'Bahasa',
-  },
-}
-
 export default function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [language, setLanguage] = useState('en')
   const pathname = usePathname()
-
-  const t = translations[language]
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -129,11 +52,6 @@ export default function App() {
 
   const isActive = (section: string) => activeSection === section
 
-  const toggleLanguage = () => {
-    setLanguage(prevLang => (prevLang === 'en' ? 'id' : 'en'))
-  }
-
-  // Jika path mengandung '404' maka jangan tampilkan navbar
   if (pathname?.includes('404')) {
     return null
   }
@@ -154,14 +72,14 @@ export default function App() {
           </div>
 
           <ul className="hidden md:flex gap-3 md:gap-5 lg:gap-6 font-medium text-sm lg:text-base">
-            {['home', 'project', 'skills', 'about', 'education'].map((section) => (
-              <li key={section}>
+            {['Home', 'Project', 'Skills', 'About', 'Education'].map((label, i) => (
+              <li key={label}>
                 <button
-                  onClick={() => scrollToSection(section)}
-                  className={`transition-all duration-300 hover:text-white px-2 py-1 rounded-md ${isActive(section) ? 'text-white bg-gray-800' : 'hover:scale-105'}`}
-                  style={{ color: isActive(section) ? '#ffffff' : '#696B63' }}
+                  onClick={() => scrollToSection(label.toLowerCase())}
+                  className={`transition-all duration-300 hover:text-white px-2 py-1 rounded-md ${isActive(label.toLowerCase()) ? 'text-white bg-gray-800' : 'hover:scale-105'}`}
+                  style={{ color: isActive(label.toLowerCase()) ? '#ffffff' : '#696B63' }}
                 >
-                  {t[section as keyof typeof t]}
+                  {label}
                 </button>
               </li>
             ))}
@@ -180,9 +98,9 @@ export default function App() {
                 className="w-8 h-8 flex flex-col justify-center items-center space-y-1 hover:scale-110 transition-all duration-300 relative z-50"
                 aria-label="Toggle mobile menu"
               >
-                <span className={`block w-5 h-0.5 transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5 bg-[#FFAF1A]' : 'bg-gray-300'}`}></span>
-                <span className={`block w-5 h-0.5 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0 bg-[#FFAF1A]' : 'bg-gray-300'}`}></span>
-                <span className={`block w-5 h-0.5 transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5 bg-[#FFAF1A]' : 'bg-gray-300'}`}></span>
+                <span className={`block w-5 h-0.5 transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5 bg-[#2BB6C0]' : 'bg-gray-300'}`}></span>
+                <span className={`block w-5 h-0.5 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0 bg-[#2BB6C0]' : 'bg-gray-300'}`}></span>
+                <span className={`block w-5 h-0.5 transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5 bg-[#2BB6C0]' : 'bg-gray-300'}`}></span>
               </button>
             </div>
           </div>
@@ -195,30 +113,23 @@ export default function App() {
           <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black/90 backdrop-blur-xl border-l border-gray-800 flex flex-col justify-center px-8">
             <ul className="space-y-8">
               {[
-                { name: 'home', icon: '🏠' },
-                { name: 'project', icon: '💼' },
-                { name: 'skills', icon: '🛠️' },
-                { name: 'about', icon: '👤' },
-                { name: 'education', icon: '🎓' }
+                { name: 'home', icon: '🏠', label: 'Home' },
+                { name: 'project', icon: '💼', label: 'Project' },
+                { name: 'skills', icon: '🛠️', label: 'Skills' },
+                { name: 'about', icon: '👤', label: 'About' },
+                { name: 'education', icon: '🎓', label: 'Education' }
               ].map((item, index) => (
                 <li key={item.name}>
                   <button
                     onClick={() => scrollToSection(item.name)}
-                    className={`flex items-center gap-4 w-full text-left py-4 transition-all duration-500 transform hover:translate-x-2 ${isActive(item.name) ? 'text-[#FFAF1A]' : 'text-white hover:text-[#FFAF1A]'}`}
+                    className={`flex items-center gap-4 w-full text-left py-4 transition-all duration-500 transform hover:translate-x-2 ${isActive(item.name) ? 'text-[#2BB6C0]' : 'text-white hover:text-[#2BB6C0]'}`}
                     style={{
                       animationDelay: `${index * 100}ms`,
                       animation: mobileMenuOpen ? 'slideInRight 0.6s ease-out forwards' : ''
                     }}
                   >
                     <span className="text-2xl">{item.icon}</span>
-                    <DecryptedText
-                      text={t[item.name as keyof typeof t]}
-                      speed={50}
-                      maxIterations={15}
-                      characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
-                      className="text-xl font-medium"
-                      parentClassName="block"
-                    />
+                    <span className="text-xl font-medium">{item.label}</span> {/* Changed from DecryptedText */}
                   </button>
                 </li>
               ))}

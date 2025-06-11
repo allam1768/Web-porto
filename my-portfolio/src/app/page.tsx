@@ -7,6 +7,7 @@ import Image from 'next/image';
 import CountUp from '@/components/CountUp'
 
 
+
 // Import the data from the new file
 import { educationData, projectData, skillsData } from '../components/data'; 
 import Footer from '@/components/Footer';
@@ -92,7 +93,7 @@ export default function App() {
             <div className="text-4xl leading-none">
               <CountUp
                 from={100}
-                to={projectData.length} // Dynamically use the number of projects
+                to={projectData.length}
                 separator=","
                 direction="up"
                 duration={11.9}

@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  
+
   // List rute yang ingin disembunyikan Navbar-nya
   const hideNavbarRoutes = ['/galery', '/frondend', '/desain']
   const hideNavbar = hideNavbarRoutes.includes(pathname)
