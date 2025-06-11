@@ -1,8 +1,8 @@
 import './globals.css'
 import { Raleway } from 'next/font/google'
-import Navbar from '../components/Navbar'
+import LayoutWrapper from '../components/LayoutWrapper'
 
-const raleway = Raleway({ 
+const raleway = Raleway({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700']
 })
@@ -20,10 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${raleway.className} bg-[#121212] text-white`}>
-        <Navbar />
-        <main className="w-full">
+        <LayoutWrapper>
           {children}
-        </main>
+        </LayoutWrapper>
       </body>
     </html>
   )
