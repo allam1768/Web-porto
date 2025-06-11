@@ -72,7 +72,7 @@ export default function App() {
           </div>
 
           <ul className="hidden md:flex gap-3 md:gap-5 lg:gap-6 font-medium text-sm lg:text-base">
-            {['Home', 'Project', 'Skills', 'About', 'Education'].map((label, i) => (
+            {['Home', 'Project', 'Skills', 'About', 'Education'].map((label) => (
               <li key={label}>
                 <button
                   onClick={() => scrollToSection(label.toLowerCase())}
