@@ -17,7 +17,7 @@ const bend = isMobile ? 0.8 : 2.5;
 
       <section className="text-center pt-30 sm:pt-20 md:pt-24 lg:pt-28 pb-8 sm:pb-12 md:pb-16 lg:pb-20 px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-black tracking-tight">
-          My <span className="text-[#2BB6C0]">Galery</span>
+          My <span className="text-[#2BB6C0]">Gallery</span>
         </h1>
         <p className="mt-6 sm:mt-6 md:mt-8 lg:mt-10 text-sm sm:text-base md:text-lg text-black max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed">
           This is the result of various moments that I captured through the camera lens. Each image holds a story and experience that I want to share with you, from the places I visited to the little things that inspired me

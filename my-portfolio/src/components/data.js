@@ -48,17 +48,17 @@ export const projectData = [
   export const skillsData = [
     {
       title: "Photography",
-      image: 'photograpy.jpg',
+      image: 'photograpy.webp',
       linkTo: '/galery'
     },
     {
       title: "Frontend",
-      image: 'Frondend.png',
+      image: 'Frondend.webp',
       linkTo: '/frondend'
     },
     {
       title: "Beginner UI/UX Project",
-      image: 'Desainer.png',
+      image: 'Desainer.webp',
       linkTo: '/desain'
     }
   ];
@@ -101,123 +101,124 @@ export const desainitems = [
 ];
 
   
-  const galleryItems = [
-    {
-      id: 1,
-      image: 'datagalery/1.jpg',
-      text: '',
-    },
-    {
-      id: 2,
-      image: 'datagalery/2.jpg',
-      text: '',
-    },
-    {
-      id: 3,
-      image: 'datagalery/3.jpg',
-      text: '',
-    },
-    {
-      id: 4,
-      image: 'datagalery/4.jpg',
-      text: '',
-    },
-    {
-      id: 5,
-      image: 'datagalery/5.jpg',
-      text: '',
-    },
-    {
-      id: 6,
-      image: 'datagalery/6.jpg',
-      text: '',
-    },
-    {
-      id: 7,
-      image: 'datagalery/7.jpg',
-      text: '',
-    },
-    {
-      id: 8,
-      image: 'datagalery/8.jpg',
-      text: '',
-    },
-    {
-      id: 9,
-      image: 'datagalery/9.jpg',
-      text: '',
-    },
-    {
-      id: 10,
-      image: 'datagalery/10.jpg',
-      text: '',
-    },
-    {
-      id: 11,
-      image: 'datagalery/11.jpg',
-      text: '',
-    },
-    {
-      id: 12,
-      image: 'datagalery/12.jpg',
-      text: '',
-    },
-    {
-      id: 13,
-      image: 'datagalery/13.jpg',
-      text: '',
-    },
-    {
-      id: 14,
-      image: 'datagalery/14.jpg',
-      text: '',
-    },
-    {
-      id: 15,
-      image: 'datagalery/15.jpg',
-      text: '',
-    },
-    {
-      id: 16,
-      image: 'datagalery/16.jpg',
-      text: '',
-    },
-    {
-      id: 17,
-      image: 'datagalery/17.jpg',
-      text: '',
-    },
-    {
-      id: 18,
-      image: 'datagalery/18.jpg',
-      text: '',
-    },
-    {
-      id: 19,
-      image: 'datagalery/19.jpg',
-      text: '',
-    },
-    {
-      id: 20,
-      image: 'datagalery/20.jpg',
-      text: '',
-    },
-    {
-      id: 21,
-      image: 'datagalery/21.jpg',
-      text: '',
-    },
-    {
-      id: 22,
-      image: 'datagalery/22.jpg',
-      text: '',
-    },
-    {
-      id: 23,
-      image: 'datagalery/23.jpg',
-      text: '',
-    },
-  ];
+const galleryItems = [
+  {
+    id: 1,
+    image: 'datagalery/1.webp',
+    text: '',
+  },
+  {
+    id: 2,
+    image: 'datagalery/2.webp',
+    text: '',
+  },
+  {
+    id: 3,
+    image: 'datagalery/3.webp',
+    text: '',
+  },
+  {
+    id: 4,
+    image: 'datagalery/4.webp',
+    text: '',
+  },
+  {
+    id: 5,
+    image: 'datagalery/5.webp',
+    text: '',
+  },
+  {
+    id: 6,
+    image: 'datagalery/6.webp',
+    text: '',
+  },
+  {
+    id: 7,
+    image: 'datagalery/7.webp',
+    text: '',
+  },
+  {
+    id: 8,
+    image: 'datagalery/8.webp',
+    text: '',
+  },
+  {
+    id: 9,
+    image: 'datagalery/9.webp',
+    text: '',
+  },
+  {
+    id: 10,
+    image: 'datagalery/10.webp',
+    text: '',
+  },
+  {
+    id: 11,
+    image: 'datagalery/11.webp',
+    text: '',
+  },
+  {
+    id: 12,
+    image: 'datagalery/12.webp',
+    text: '',
+  },
+  {
+    id: 13,
+    image: 'datagalery/13.webp',
+    text: '',
+  },
+  {
+    id: 14,
+    image: 'datagalery/14.webp',
+    text: '',
+  },
+  {
+    id: 15,
+    image: 'datagalery/15.webp',
+    text: '',
+  },
+  {
+    id: 16,
+    image: 'datagalery/16.webp',
+    text: '',
+  },
+  {
+    id: 17,
+    image: 'datagalery/17.webp',
+    text: '',
+  },
+  {
+    id: 18,
+    image: 'datagalery/18.webp',
+    text: '',
+  },
+  {
+    id: 19,
+    image: 'datagalery/19.webp',
+    text: '',
+  },
+  {
+    id: 20,
+    image: 'datagalery/20.webp',
+    text: '',
+  },
+  {
+    id: 21,
+    image: 'datagalery/21.webp',
+    text: '',
+  },
+  {
+    id: 22,
+    image: 'datagalery/22.webp',
+    text: '',
+  },
+  {
+    id: 23,
+    image: 'datagalery/23.webp',
+    text: '',
+  },
+];
+
   
   export default galleryItems;
   

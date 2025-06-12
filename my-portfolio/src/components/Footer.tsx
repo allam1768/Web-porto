@@ -41,8 +41,8 @@ export default function Footer() {
               <h3 className="text-white text-lg sm:text-xl font-medium">Allam</h3>
             </div>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-lg">
-              Delivering smooth and engaging mobile experiences<br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>through strong UI/UX design and front-end development.
+            Creating smooth and engaging mobile experiences<br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>through thoughtful UI/UX design and robust front-end development.
             </p>
           </div>
 
