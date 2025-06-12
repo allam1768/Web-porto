@@ -89,8 +89,8 @@ export default function App() {
             <div className="text-5xl text-gray-400 leading-none">❛❛</div>
             <p className="text-16sm leading-relaxed">
               I designed and built a mobile front-end that delivers a smooth and
-              intuitive user experience. If you're aiming for great results, I'm
-              the developer you need!
+              intuitive user experience. If you&apos;re aiming for great
+              results, I&apos;m the developer you need!
             </p>
           </div>
         </div>
