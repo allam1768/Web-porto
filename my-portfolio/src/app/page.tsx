@@ -345,7 +345,7 @@ export default function App() {
                   .
                   <br />
                   <br />
-                  Currently, I'm working on my{" "}
+                  Currently, I&apos;m working on my{" "}
                   <span style={{ color: "#2BB6C0" }}>
                     personal portfolio website
                   </span>{" "}
