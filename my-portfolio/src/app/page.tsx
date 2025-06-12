@@ -5,6 +5,7 @@ import TiltedCard from "@/components/TiltedCard";
 import ClickSpark from "@/components/ClickSpark";
 import Image from "next/image";
 import CountUp from "@/components/CountUp";
+import Link from "next/link";
 
 // Import the data from the new file
 import { educationData, projectData, skillsData } from "../components/data";
@@ -151,38 +152,41 @@ export default function App() {
                 </h2>
 
                 {/* Tombol */}
-                <button
-                  className="
-                    flex items-center gap-2
-                    text-white font-semibold
-                    py-2 px-4 sm:px-5
-                    rounded-full
-                    transition duration-300
-                    text-sm sm:text-base
-                    self-end sm:self-auto
-                    whitespace-nowrap
-                    mt-2 sm:mt-0
-                    bg-[#2BB6C0]
-                  "
-                >
-                  See More
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="transform rotate-[30deg] sm:w-5 sm:h-5"
+                <Link href="/project" passHref>
+                  <div
+                    className="
+      flex items-center gap-2
+      text-white font-semibold
+      py-2 px-4 sm:px-5
+      rounded-full
+      transition duration-300
+      text-sm sm:text-base
+      self-end sm:self-auto
+      whitespace-nowrap
+      mt-2 sm:mt-0
+      bg-[#2BB6C0]
+      cursor-pointer
+    "
                   >
-                    <path
-                      d="M12 4L12 20M12 4L6 10M12 4L18 10"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
+                    See More
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="transform rotate-[30deg] sm:w-5 sm:h-5"
+                    >
+                      <path
+                        d="M12 4L12 20M12 4L6 10M12 4L18 10"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </Link>
               </div>
 
               {/* Project Grid */}

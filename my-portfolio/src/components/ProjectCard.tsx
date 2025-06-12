@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
 }) => {
   return (
-    <div className="relative w-80 h-96">
+    <div className="relative w-80 h-96 group">
       {/* SVG clip path */}
       <svg className="absolute w-0 h-0">
         <defs>
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </defs>
       </svg>
 
-      {/* Card with clip-path */}
+      {/* Card */}
       <div
         className="relative w-full h-full bg-[#3B3B3B] overflow-hidden cursor-default z-10"
         style={{ clipPath: 'url(#projectClip)' }}
@@ -46,9 +46,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         )}
 
-        {/* Content section below image */}
+        {/* Content */}
         <div className="absolute top-48 left-0 w-full px-4 py-4 z-20">
-          {/* Project name and date row */}
           <div className="flex justify-between items-start mb-3">
             <h3 className="text-white font-semibold text-lg leading-tight flex-1 mr-4">
               {projectName}
@@ -60,7 +59,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
           </div>
 
-          {/* Description */}
           {description && (
             <p className="text-gray-400 text-sm leading-relaxed whitespace-pre-wrap">
               {description}
@@ -69,14 +67,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
 
-      {/* Right arrow button */}
+      {/* Tombol panah, selalu tampil tapi naik pas hover */}
       {link && (
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-7 right-0 w-14 h-14 rounded-full z-20 flex items-center justify-center bg-[#3B3B3B] hover:bg-[#505050] transition-colors duration-300"
-          aria-label={`View ${projectName} project`} // Added aria-label for accessibility
+          className="absolute bottom-7 right-0 w-14 h-14 rounded-full z-20 flex items-center justify-center bg-[#3B3B3B] shadow-md group-hover:-translate-y-1 transition-transform duration-300"
+          aria-label={`View ${projectName} project`}
         >
           <svg
             width="20"

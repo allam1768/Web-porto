@@ -152,12 +152,12 @@ export default function GalleryPage() {
             >
               <Card>
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Desain Portofolio</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Portfolio Design</h3>
                   <div className="flex-1 overflow-hidden">
                     <img
                       src="/datadesain/Web portofolio.png"
                       className="w-full h-full object-cover rounded-md"
-                      alt="Desain Portofolio"
+                      alt="Portfolio Design"
                       loading="lazy"
                     />
                   </div>
@@ -166,12 +166,12 @@ export default function GalleryPage() {
               
               <Card>
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Desain Kompetisi</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Competition Design</h3>
                   <div className="flex-1 overflow-hidden">
                     <img
                       src="/datadesain/Tiketindo.png"
                       className="w-full h-full object-cover rounded-md"
-                      alt="Desain Tiketindo"
+                      alt="Tiketindo Design"
                       loading="lazy"
                     />
                   </div>
@@ -180,7 +180,7 @@ export default function GalleryPage() {
               
               <Card>
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Desain Kompetisi</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Competition Design</h3>
                   <div className="flex-1 overflow-hidden">
                     <img
                       src="/datadesain/CourseMiut.png"
@@ -194,7 +194,7 @@ export default function GalleryPage() {
               
               <Card>
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Desain Aplikasi</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Application Design</h3>
                   <div className="flex-1 overflow-hidden">
                     <img
                       src="/datadesain/math.png"

@@ -7,7 +7,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   const pathname = usePathname();
 
   // List rute yang ingin disembunyikan Navbar-nya
-  const hideNavbarRoutes = ['/galery', '/frondend', '/desain']
+  const hideNavbarRoutes = ['/galery', '/frondend', '/desain', '/project']
   const hideNavbar = hideNavbarRoutes.includes(pathname)
 
   return (
