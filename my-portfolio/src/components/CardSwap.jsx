@@ -54,7 +54,6 @@ const CardSwap = ({
   verticalDistance = 70,
   delay = 5000,
   pauseOnHover = false,
-  onCardClick,
   skewAmount = 6,
   easing = "elastic",
   children,
@@ -199,10 +198,6 @@ const CardSwap = ({
         key: i,
         ref: refs[i],
         style: { width, height, ...(child.props.style ?? {}) },
-        onClick: (e) => {
-          child.props.onClick?.(e);
-          onCardClick?.(i);
-        },
       }) : child
   );
 
