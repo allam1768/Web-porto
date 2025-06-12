@@ -1,7 +1,7 @@
 "use client";
 import NavbarGalery from "@/components/Navbar2";
 import ClickSpark from "@/components/ClickSpark";
-import { frondData, projectData } from "@/components/data";
+import { projectData } from "@/components/data";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 
