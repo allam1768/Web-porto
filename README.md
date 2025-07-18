@@ -10,6 +10,6 @@ Website portofolio pribadi yang elegan dan responsif, dibangun menggunakan **Nex
 
 - [Next.js](https://nextjs.org/) – React Framework untuk aplikasi web modern
 - [React](https://reactjs.org/) – Library UI berbasis komponen
-- [Tailwind CSS](https://tailwindcss.com/) *(jika digunakan)*
+- [Tailwind CSS](https://tailwindcss.com/) 
 - [Vercel](https://vercel.com/) – Hosting dan deployment super cepat
 
