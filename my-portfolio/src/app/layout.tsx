@@ -19,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" type="image/png" href="/logoweb.png" />
+      </head>
       <body className={`${raleway.className} bg-[#121212] text-white`}>
         <LayoutWrapper>
           {children}
