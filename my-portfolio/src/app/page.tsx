@@ -347,12 +347,12 @@ export default function App() {
                   <span style={{ color: "#2BB6C0" }}>Allam Permata Putra</span>
                 </h3>
                 <p className="text-sm sm:text-base text-black leading-relaxed mb-4 sm:mb-6">
-                  I'm a passionate{" "}
+                  I&apos;m a passionate{" "}
                   <span style={{ color: "#2BB6C0" }}>Frontend Developer</span>{" "}
                   who loves building elegant and responsive user interfaces
                   using <span style={{ color: "#2BB6C0" }}>React</span>,{" "}
                   <span style={{ color: "#2BB6C0" }}>Tailwind CSS</span>, and{" "}
-                  <span style={{ color: "#2BB6C0" }}>Flutter</span>. I'm also
+                  <span style={{ color: "#2BB6C0" }}>Flutter</span>. I&apos;m also
                   deeply interested in{" "}
                   <span style={{ color: "#2BB6C0" }}>UI/UX</span>,{" "}
                   <span style={{ color: "#2BB6C0" }}>web design</span>, and{" "}

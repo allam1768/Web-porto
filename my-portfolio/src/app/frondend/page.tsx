@@ -42,11 +42,11 @@ export default function GalleryPage() {
             {/* Sertifikat Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <div className="bg-gray-100 p-4 rounded-xl shadow hover:shadow-md transition">
-                <img
+                <image>
                   src="/dataproject/sertiv1.webp"
                   alt="Certificate 1"
                   className="rounded-lg mb-3 w-full h-40 sm:h-48 object-cover"
-                />
+                </image>
                 <h3 className="font-semibold text-base sm:text-lg text-[#252526]">
                   National Competition Certificate
                 </h3>
@@ -56,11 +56,11 @@ export default function GalleryPage() {
                 </p>
               </div>
               <div className="bg-gray-100 p-4 rounded-xl shadow hover:shadow-md transition">
-                <img
+                <image>
                   src="/dataproject/sertiv2.webp"
                   alt="Certificate 2"
                   className="rounded-lg mb-3 w-full h-40 sm:h-48 object-cover"
-                />
+                </image>
                 <h3 className="font-semibold text-base sm:text-lg text-[#252526]">
                   National Competition Certificate
                 </h3>
@@ -88,11 +88,11 @@ export default function GalleryPage() {
                 key={index}
                 className="flex items-center gap-2 bg-white rounded-xl shadow-md px-3 py-1 sm:px-4 sm:py-2 hover:shadow-lg transition-shadow whitespace-nowrap flex-shrink-0"
               >
-                <img
+                <image>
                   src={item.image}
                   alt={item.name}
                   className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 object-contain"
-                />
+                </image>
                 <span className="text-xs sm:text-sm lg:text-base font-medium text-black">
                   {item.name}
                 </span>

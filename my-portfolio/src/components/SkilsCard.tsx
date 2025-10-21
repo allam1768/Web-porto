@@ -42,29 +42,29 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ title, image, linkTo }) => {
           <>
             {/* Layer 2 - Blur dan shadow */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-80 z-5 opacity-30 blur-[2px] overflow-hidden rounded-[20px]">
-              <img
+              <image>
                 src={image}
                 alt="skill background shadow"
                 className="w-full h-60 object-cover"
-              />
+              </image>
             </div>
 
             {/* Layer 1 */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-100 z-20 opacity-40 blur-[1px] overflow-hidden rounded-[20px]">
-              <img
+              <image>
                 src={image}
                 alt="skill background shadow"
                 className="w-full h-60 object-cover"
-              />
+              </image>
             </div>
 
             {/* Gambar utama */}
             <div className="absolute bottom-0 left-0 w-full z-20 overflow-hidden rounded-[20px]">
-              <img
+              <image>
                 src={image}
                 alt="skill background"
                 className="w-full h-60 object-cover"
-              />
+              </image>
             </div>
           </>
         )}

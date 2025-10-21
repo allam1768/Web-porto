@@ -154,12 +154,12 @@ export default function GalleryPage() {
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
                   <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Portfolio Design</h3>
                   <div className="flex-1 overflow-hidden">
-                    <img
+                    <image>
                       src="/datadesain/Web portofolio.png"
                       className="w-full h-full object-cover rounded-md"
                       alt="Portfolio Design"
                       loading="lazy"
-                    />
+                    </image>
                   </div>
                 </div>
               </Card>
@@ -168,12 +168,12 @@ export default function GalleryPage() {
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
                   <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Competition Design</h3>
                   <div className="flex-1 overflow-hidden">
-                    <img
+                    <image>
                       src="/datadesain/Tiketindo.png"
                       className="w-full h-full object-cover rounded-md"
                       alt="Tiketindo Design"
                       loading="lazy"
-                    />
+                    </image>
                   </div>
                 </div>
               </Card>
@@ -182,12 +182,12 @@ export default function GalleryPage() {
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
                   <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Competition Design</h3>
                   <div className="flex-1 overflow-hidden">
-                    <img
+                    <image>
                       src="/datadesain/CourseMiut.png"
                       className="w-full h-full object-cover rounded-md"
                       alt="Desain CourseMiut"
                       loading="lazy"
-                    />
+                    </image>
                   </div>
                 </div>
               </Card>
@@ -196,12 +196,12 @@ export default function GalleryPage() {
                 <div className="w-full h-full p-3 sm:p-4 md:p-6 flex flex-col">
                   <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2 sm:mb-3">Application Design</h3>
                   <div className="flex-1 overflow-hidden">
-                    <img
+                    <image>
                       src="/datadesain/math.png"
                       className="w-full h-full object-cover rounded-md"
                       alt="Desain Aplikasi Math"
                       loading="lazy"
-                    />
+                    </image>
                   </div>
                 </div>
               </Card>
