@@ -70,7 +70,7 @@ export const projectData = [
 export const skillsData = [
   {
     title: "Photography",
-    image: "photograpy.webp",
+    image: "10.webp",
     linkTo: "/galery",
   },
   {
@@ -78,11 +78,7 @@ export const skillsData = [
     image: "Frondend.webp",
     linkTo: "/frondend",
   },
-  {
-    title: "Beginner UI/UX Project",
-    image: "Desainer.webp",
-    linkTo: "/desain",
-  },
+  
 ];
 
 export const frondData = [

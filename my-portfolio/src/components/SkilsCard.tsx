@@ -10,14 +10,14 @@ interface SkillsCardProps {
 
 const SkillsCard: React.FC<SkillsCardProps> = ({ title, image, linkTo }) => {
   return (
-    <div className="relative w-80 h-96">
+    <div className=" w-115 h-91">
       {/* SVG clip path */}
       <svg className="absolute w-0 h-0">
         <defs>
           <clipPath id="skillsClip" clipPathUnits="objectBoundingBox">
             <path
-              transform="scale(0.00238, 0.00207)" // hasil 1/width dan 1/height asli SVG
-              d="M371 0C393.091 0 411 17.9086 411 40V324.842C411 340.058 395.21 351.708 380.504 348.43C375.429 347.342 370.063 346.5 364.5 346.5C325.951 346.5 294.5 377.951 294.5 416.5C294.5 421.563 295.158 426.429 296.43 431.004C299.208 448.21 288.058 466 269.842 466H40C17.9086 466 0 448.091 0 426V40C3.47946e-06 17.9086 17.9086 6.5634e-07 40 0H371Z"
+              transform="scale(0.00163, 0.00207)" // hasil 1/width (1/613) dan 1/height (1/484) asli SVG
+              d="M573 0C595.091 0 613 17.9086 613 40V309.842C613 328.058 587.21 339.708 569.504 335.43C562.929 333.842 556.063 333 549 333C500.951 333 462 371.951 462 420C462 427.063 462.842 433.929 464.43 440.504C468.708 458.21 457.058 484 438.842 484H40C17.9086 484 0 466.091 0 444V40C3.47946e-06 17.9086 17.9086 2.01331e-07 40 0H573Z"
             />
           </clipPath>
         </defs>
@@ -41,20 +41,20 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ title, image, linkTo }) => {
         {image && (
           <>
             {/* Layer 2 - Blur dan shadow */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-64 z-5 opacity-30 blur-[2px] overflow-hidden rounded-[20px]">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-80 z-5 opacity-30 blur-[2px] overflow-hidden rounded-[20px]">
               <img
                 src={image}
                 alt="skill background shadow"
-                className="w-full h-50 object-cover"
+                className="w-full h-60 object-cover"
               />
             </div>
 
             {/* Layer 1 */}
-            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-72 z-10 opacity-40 blur-[1px] overflow-hidden rounded-[20px]">
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-100 z-20 opacity-40 blur-[1px] overflow-hidden rounded-[20px]">
               <img
                 src={image}
                 alt="skill background shadow"
-                className="w-full h-50 object-cover"
+                className="w-full h-60 object-cover"
               />
             </div>
 
@@ -63,7 +63,7 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ title, image, linkTo }) => {
               <img
                 src={image}
                 alt="skill background"
-                className="w-full h-50 object-cover"
+                className="w-full h-60 object-cover"
               />
             </div>
           </>
@@ -73,21 +73,11 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ title, image, linkTo }) => {
         <div className="absolute top-8 left-5 text-white text-xl font-semibold tracking-wide z-30">
           {title}
         </div>
-
-        {/* Divider */}
-        <div
-          className="absolute top-20 left-5 h-0.5 z-30"
-          style={{
-            width: '280px',
-            background:
-              '#ffffff',
-          }}
-        />
       </div>
 
       {/* Lingkaran dengan panah - wrapped in <a> tag */}
       {linkTo && (
-        <a href={linkTo} className="absolute bottom-3 right-0 w-20 h-20 rounded-full z-20 flex items-center justify-center"
+        <a href={linkTo} className="absolute bottom-0 right-0 w-22 h-22 rounded-full z-20 flex items-center justify-center"
           style={{
             background: 'linear-gradient(135deg, #2BAAB3 0%, #2299A2 100%)', // Changed from orange gradient
           }}
