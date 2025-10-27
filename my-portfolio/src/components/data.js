@@ -195,20 +195,11 @@ const galleryItems = [
     text: "",
   },
   {
-    id: 10,
-    image: "datagalery/10.webp",
-    text: "",
-  },
-  {
     id: 11,
     image: "datagalery/11.webp",
     text: "",
   },
-  {
-    id: 12,
-    image: "datagalery/12.webp",
-    text: "",
-  },
+  
   {
     id: 13,
     image: "datagalery/13.webp",
@@ -264,6 +255,64 @@ const galleryItems = [
     image: "datagalery/23.webp",
     text: "",
   },
+  {
+    id: 24,
+    image: "datagalery/24.jpg",
+    text: "",
+  },
+  {
+    id: 25,
+    image: "datagalery/25.jpg",
+    text: "",
+  },
+  {
+    id: 26,
+    image: "datagalery/26.jpg",
+    text: "",
+  },
+  {
+    id: 27,
+    image: "datagalery/27.jpg",
+    text: "",
+  },
+  {
+    id: 28,
+    image: "datagalery/28.jpg",
+    text: "",
+  },
+  {
+    id: 29,
+    image: "datagalery/29.jpg",
+    text: "",
+  },
+  {
+    id: 30,
+    image: "datagalery/30.jpg",
+    text: "",
+  },
+  {
+    id: 31,
+    image: "datagalery/31.jpg",
+    text: "",
+  },
+  {
+    id: 32,
+    image: "datagalery/32.jpg",
+    text: "",
+  },
+  {
+    id: 33,
+    image: "datagalery/33.jpg",
+    text: "",
+  },
+  {
+    id: 34,
+    image: "datagalery/34.jpg",
+    text: "",
+  },
+  
+
+  
 ];
 
 export default galleryItems;
