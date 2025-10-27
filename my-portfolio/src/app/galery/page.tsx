@@ -79,7 +79,8 @@ function Lightbox({ image, onClose, onPrev, onNext, current, total }: LightboxPr
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const openLightbox = (image) => setSelectedImage(image);
+  const openLightbox = (image: { id: string | number; image: string; title: string }) => setSelectedImage(image);
+
   const closeLightbox = () => setSelectedImage(null);
 
   const showNext = () => {
