@@ -77,11 +77,23 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ title, image, linkTo }) => {
 
       {/* Lingkaran dengan panah - wrapped in <a> tag */}
       {linkTo && (
-        <a href={linkTo} className="absolute bottom-0 right-0 w-22 h-22 rounded-full z-20 flex items-center justify-center"
-          style={{
-            background: 'linear-gradient(135deg, #2BAAB3 0%, #2299A2 100%)', // Changed from orange gradient
-          }}
-        >
+        <a
+  href={linkTo}
+  className="absolute bottom-0 right-0 w-22 h-22 rounded-full z-20 flex items-center justify-center 
+  transition-all duration-300 hover:scale-110"
+  style={{
+    background: 'linear-gradient(135deg, #2BAAB3 0%, #2299A2 100%)',
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.background = 'linear-gradient(135deg, #3B3B3B 0%)';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.background = 'linear-gradient(135deg, #2BAAB3 0%, #2299A2 100%)';
+  }}
+>
+
+
+
           <svg
             width="40"
             height="40"

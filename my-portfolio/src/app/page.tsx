@@ -9,8 +9,6 @@ import Image from "next/image";
 import CountUp from "@/components/CountUp";
 import Link from "next/link";
 
-
-
 // Import the data from the new file
 import { educationData, projectData, skillsData } from "../components/data";
 import Footer from "@/components/Footer";
@@ -32,7 +30,10 @@ export default function App() {
 
           {/* Name - Animated */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-3 text-center leading-tight animate-fade-in-up animation-delay-200">
-            I&apos;m <span style={{ color: "#2BB6C0" }} className="animate-pulse-slow">Allam,</span>
+            I&apos;m{" "}
+            <span style={{ color: "#2BB6C0" }} className="animate-pulse-slow">
+              Allam,
+            </span>
           </h1>
 
           {/* Front End Development Text - Animated */}
@@ -91,7 +92,9 @@ export default function App() {
         {/* Text Quote - Animated */}
         <div className="absolute bottom-[180px] left-[calc(50%-600px)] z-50 max-w-[320px] hidden lg:block animate-fade-in-left animation-delay-800">
           <div className="">
-            <div className="text-5xl text-gray-400 leading-none animate-float">❛❛</div>
+            <div className="text-5xl text-gray-400 leading-none animate-float">
+              ❛❛
+            </div>
             <p className="text-16sm leading-relaxed">
               I designed and built a mobile front-end that delivers a smooth and
               intuitive user experience. If you&apos;re aiming for great
@@ -118,7 +121,6 @@ export default function App() {
             <p className="text-16sm leading-relaxed">Project</p>
           </div>
         </div>
-        
       </section>
 
       {/* project Section */}
@@ -215,7 +217,7 @@ export default function App() {
                   })
                   .slice(0, 3)
                   .map((project, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="animate-fade-in-up"
                       style={{ animationDelay: `${index * 200}ms` }}
@@ -250,9 +252,9 @@ export default function App() {
             {/* Skills Grid - Animated */}
             <div className="flex justify-center items-center gap-4 sm:gap-8 lg:gap-12 xl:gap-16 pb-6 sm:pb-10 flex-wrap">
               {skillsData.map((skill, index) => (
-                <div 
+                <div
                   key={index}
-                  className="animate-fade-in-up hover:scale-110 transition-transform duration-300"
+                  className="animate-fade-in-up transition-transform duration-300"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <SkillsCard
@@ -352,8 +354,8 @@ export default function App() {
                   who loves building elegant and responsive user interfaces
                   using <span style={{ color: "#2BB6C0" }}>React</span>,{" "}
                   <span style={{ color: "#2BB6C0" }}>Tailwind CSS</span>, and{" "}
-                  <span style={{ color: "#2BB6C0" }}>Flutter</span>. I&apos;m also
-                  deeply interested in{" "}
+                  <span style={{ color: "#2BB6C0" }}>Flutter</span>. I&apos;m
+                  also deeply interested in{" "}
                   <span style={{ color: "#2BB6C0" }}>UI/UX</span>,{" "}
                   <span style={{ color: "#2BB6C0" }}>web design</span>, and{" "}
                   <span style={{ color: "#2BB6C0" }}>
@@ -421,8 +423,8 @@ export default function App() {
               {/* Timeline items - Animated */}
               <div className="space-y-8 sm:space-y-12">
                 {educationData.map((item, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="relative animate-fade-in-up"
                     style={{ animationDelay: `${index * 200}ms` }}
                   >
@@ -431,7 +433,9 @@ export default function App() {
                       <div className="absolute left-4 transform -translate-x-1/2 z-10 w-5 h-5 rounded-full bg-white border-2 border-gray-400 flex items-center justify-center animate-scale-in">
                         <div
                           className={`w-3 h-3 rounded-full ${
-                            item.isActive ? "bg-[#2BB6C0] animate-pulse-slow" : "bg-black"
+                            item.isActive
+                              ? "bg-[#2BB6C0] animate-pulse-slow"
+                              : "bg-black"
                           }`}
                         ></div>
                       </div>
@@ -463,7 +467,9 @@ export default function App() {
                       <div className="absolute left-1/2 transform -translate-x-1/2 z-10 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white border-2 border-gray-400 flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
                         <div
                           className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
-                            item.isActive ? "bg-[#2BB6C0] animate-pulse-slow" : "bg-black"
+                            item.isActive
+                              ? "bg-[#2BB6C0] animate-pulse-slow"
+                              : "bg-black"
                           }`}
                         ></div>
                       </div>
@@ -528,10 +534,11 @@ export default function App() {
 
       {/* footer Section */}
       <Footer />
-      
 
       {/* Add custom animations styles */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes fadeInDown {
           from {
             opacity: 0;
@@ -757,8 +764,9 @@ export default function App() {
         .animation-delay-800 {
           animation-delay: 800ms;
         }
-      `}} />
+      `,
+        }}
+      />
     </div>
-    
   );
 }
