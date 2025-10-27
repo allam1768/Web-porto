@@ -6,12 +6,14 @@ import NavbarGalery from '@/components/Navbar2';
 import Footer from '@/components/Footer';
 import galleryItems from '@/components/data'; // ambil data dari file data.js
 
+interface GalleryItem {
+  id: string | number;
+  image: string;
+  title: string;
+}
+
 interface LightboxProps {
-  image: {
-    id: string | number;
-    image: string;
-    title: string;
-  } | null;
+  image: GalleryItem | null;
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
@@ -77,19 +79,21 @@ function Lightbox({ image, onClose, onPrev, onNext, current, total }: LightboxPr
 }
 
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
-  const openLightbox = (image: { id: string | number; image: string; title: string }) => setSelectedImage(image);
+  const openLightbox = (image: GalleryItem) => setSelectedImage(image);
 
   const closeLightbox = () => setSelectedImage(null);
 
   const showNext = () => {
+    if (!selectedImage) return;
     const currentIndex = galleryItems.findIndex(item => item.id === selectedImage.id);
     const nextIndex = (currentIndex + 1) % galleryItems.length;
     setSelectedImage(galleryItems[nextIndex]);
   };
 
   const showPrev = () => {
+    if (!selectedImage) return;
     const currentIndex = galleryItems.findIndex(item => item.id === selectedImage.id);
     const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
     setSelectedImage(galleryItems[prevIndex]);
@@ -114,7 +118,7 @@ export default function GalleryPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {[...galleryItems]
-            .sort((a, b) => b.id - a.id)
+            .sort((a, b) => Number(b.id) - Number(a.id))
             .map((item, index) => (
               <div
                 key={item.id}
