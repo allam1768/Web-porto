@@ -7,9 +7,9 @@ import Footer from '@/components/Footer';
 import galleryItems from '@/components/data'; // ambil data dari file data.js
 
 interface GalleryItem {
-  id: string | number;
+  id: number;
   image: string;
-  title: string;
+  text: string;
 }
 
 interface LightboxProps {
@@ -50,11 +50,11 @@ function Lightbox({ image, onClose, onPrev, onNext, current, total }: LightboxPr
       <div className="max-w-5xl max-h-[90vh] relative">
         <img
           src={image.image}
-          alt={image.title}
+          alt={image.text}
           className="max-w-full max-h-[90vh] object-contain rounded-lg"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6 text-white rounded-b-lg">
-          <h3 className="text-2xl font-bold">{image.title}</h3>
+          <h3 className="text-2xl font-bold">{image.text}</h3>
           <p className="text-xs text-gray-400 mt-3">{current + 1} / {total}</p>
         </div>
       </div>
@@ -133,14 +133,14 @@ export default function GalleryPage() {
                 >
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt={item.text}
                     className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   
                   {/* Hover Overlay (tanpa deskripsi) */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-white">{item.text}</h3>
                     </div>
                     <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <ZoomIn className="text-white" size={20} />
