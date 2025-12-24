@@ -54,7 +54,7 @@ export default function App() {
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center animate-fade-in animation-delay-600">
           <div className="relative w-[370px] h-[370px] rounded-t-full overflow-hidden hover:scale-105 transition-transform duration-500">
             <Image
-              src="/profilepp.webp"
+              src="/me.png"
               alt="Allam Profile"
               layout="fill"
               objectFit="cover"
